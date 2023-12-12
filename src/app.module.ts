@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BookingsModule } from './modules/bookings/bookings.module';
+import { OrdersModule } from './modules/orders/orders.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSourceConfig } from './config/orm.config';
@@ -15,7 +15,7 @@ import { DataSourceConfig } from './config/orm.config';
     TypeOrmModule.forRoot({
       ...DataSourceConfig
     }),
-    BookingsModule
+    OrdersModule
   ],
   controllers: [AppController],
   providers: [AppService],

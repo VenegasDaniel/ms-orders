@@ -1,1 +1,1 @@
-export { Booking } from './booking.entity'
+export { Booking } from './order.entity'

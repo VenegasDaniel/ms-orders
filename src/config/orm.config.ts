@@ -1,5 +1,5 @@
 import { ConfigModule } from "@nestjs/config";
-import { Booking} from "../entities";
+import { Order} from "../entities";
 import { DataSource, DataSourceOptions } from "typeorm";
 
 
@@ -17,15 +17,21 @@ const DatabaseConfig: DataSourceOptions = {
     database: process.env.TYPEORM_DATABASE,
     synchronize: process.env.TYPEORM_SYNCHRONIZE === 'true',
     logging: process.env.TYPEORM_LOGGING === 'true',
-    entities: [Booking],
-    migrations: [__dirname + '/../migrations/*{.js,.ts}'], 
+    entities: [Order],
+    migrations: [__dirname + '/../migrations/*{.js,.ts}'],
+    extra: {
+        ssl: {
+            rejectUnauthorized: false, // Puedes ajustar esto según la configuración de tu instancia RDS
+        },
+    },
+
 }
 
 const TestConfig: DataSourceOptions = {
     type: 'sqlite3' as any,
     database: ':memory:',
     dropSchema: true,
-    entities: [Booking],
+    entities: [Order],
     synchronize: true,
     logging: false,
     migrations: [__dirname + '/../test/migrations/*{.js,.ts}'],

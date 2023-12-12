@@ -1,4 +1,4 @@
-export class CreateBookingDto {
+export class CreateOrderDto {
 
     day: string;
     date: Date;
