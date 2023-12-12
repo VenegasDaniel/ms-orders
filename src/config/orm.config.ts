@@ -24,7 +24,7 @@ const DatabaseConfig: DataSourceOptions = {
             rejectUnauthorized: false, // Puedes ajustar esto según la configuración de tu instancia RDS
         },
     },
-
+    
 }
 
 const TestConfig: DataSourceOptions = {

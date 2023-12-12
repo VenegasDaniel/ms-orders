@@ -20,4 +20,7 @@ export class Order {
     @Column()
     ubication: string;
 
+    @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+    createdAt: Date;
+
 }
