@@ -1,9 +1,7 @@
 export class CreateOrderDto {
 
-    day: string;
+    priceTotal: number;
     date: Date;
-    hourStart: string;
-    hourEnd: string;
-    type: string;
-    
+    stringList : string[];
+    ubication: string;
 }

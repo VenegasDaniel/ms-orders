@@ -15,8 +15,8 @@ export class OrdersService {
   }
   
   async create(createOrderDto: CreateOrderDto) {
-    const booking = this.orderRepository.create(createOrderDto);
-    return await this.orderRepository.save(booking);
+    const order = this.orderRepository.create(createOrderDto);
+    return await this.orderRepository.save(order);
   }
 
   async findAll() {

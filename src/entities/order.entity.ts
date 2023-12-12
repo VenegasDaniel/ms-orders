@@ -13,8 +13,11 @@ export class Order {
 
     @Column('boolean', {default: false})
     state: boolean;
-    
+
     @Column('simple-array', { nullable: true })
     stringList: string[];
+
+    @Column()
+    ubication: string;
 
 }
