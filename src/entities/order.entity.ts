@@ -23,4 +23,7 @@ export class Order {
     @CreateDateColumn({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     createdAt: Date;
 
+    @Column()
+    userId: string;
+
 }
