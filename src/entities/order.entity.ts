@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn } from "typeorm";
 
 @Entity({
-    name: "order"
+    name: "orders"
 })
 export class Order {
 
