@@ -9,7 +9,7 @@ import { CheckOrderDto } from './dto/check-order.dto';
 export class OrdersController {
   constructor(private readonly ordersService: OrdersService) {}
 
-  @Post('create')
+  @Post()
   create(@Body() createOrderDto: CreateOrderDto) { 
     return this.ordersService.create(createOrderDto);
   }
