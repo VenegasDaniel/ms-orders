@@ -24,11 +24,6 @@ export class OrdersController {
     return this.ordersService.findOne(+id);
   }
 
-  @Post('checkOrder')
-  async checkOrder(@Body() checkOrderDto: CheckOrderDto) {
-    return await this.ordersService.checkOrder(checkOrderDto)
-  }
-
 
   @Delete(':id')
   remove(@Param('id') id: string) {

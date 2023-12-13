@@ -11,9 +11,6 @@ export class Order {
     @Column()
     priceTotal: number;
 
-    @Column('boolean', {default: false})
-    state: boolean;
-
     @Column()
     stringList: string;
 
