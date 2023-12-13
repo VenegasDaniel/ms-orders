@@ -16,6 +16,7 @@ export class OrdersService {
   
   async create(createOrderDto: CreateOrderDto) {
     const order = this.orderRepository.create(createOrderDto);
+    console.log(order);
     return await this.orderRepository.save(order);
   }
 
