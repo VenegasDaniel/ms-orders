@@ -1,6 +1,6 @@
 export class CreateOrderDto {
 
     priceTotal: number;
-    stringList : string[];
+    stringList : string;
     ubication: string;
 }
